@@ -16,7 +16,12 @@ const app = new Vue(
                     text: 'Fare il bucato',
                     done: false
                 }
-            ]
+            ],
+
+        },
+
+        methods: {
+            
         }
     }
 )

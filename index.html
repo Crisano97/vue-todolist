@@ -22,9 +22,13 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col-12">
-                    <ul class="list-group text-center">
-                        <li class="list-group-item" :class="{'text-decoration-line-through': todo.done == true}" v-for="(todo, index) in todos">
-                            {{ todo.text }}
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex justify-content-between" v-for="(todo, index) in todos">
+                            <span  :class="{'text-decoration-line-through': todo.done == true}">
+                                {{ todo.text }}
+                            </span>
+
+                            <button role="button" class="text-danger fw-bold" v-on:click="todos.splice(index, 1)">X</button>
                         </li>
                     </ul>
                 </div>
