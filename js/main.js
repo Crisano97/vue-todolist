@@ -23,8 +23,8 @@ const app = new Vue(
 
         methods: {
             addToList: function(currentTodoEl){
-                if(!currentTodoEl === ''){
-                    this.todos.push(currentTodoEl);
+                if(!currentTodoEl == ''){
+                    this.todos.push({text: currentTodoEl, done: false});
                     this.newTodo = '';
                 }
             }
