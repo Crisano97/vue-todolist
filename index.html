@@ -31,6 +31,8 @@
                             <button role="button" class="text-danger fw-bold" v-on:click="todos.splice(index, 1)">X</button>
                         </li>
                     </ul>
+                    <input type="text" v-model="newTodo">
+                    <button  v-on:click="addToList(newTodo)">Aggiungi</button>
                 </div>
             </div>
         </div>

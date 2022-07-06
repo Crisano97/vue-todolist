@@ -17,11 +17,17 @@ const app = new Vue(
                     done: false
                 }
             ],
+            newTodo: '',
 
         },
 
         methods: {
-            
+            addToList: function(currentTodoEl){
+                if(!currentTodoEl === ''){
+                    this.todos.push(currentTodoEl);
+                    this.newTodo = '';
+                }
+            }
         }
     }
 )
