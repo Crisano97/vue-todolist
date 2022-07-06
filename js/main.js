@@ -27,7 +27,8 @@ const app = new Vue(
                     this.todos.push({text: currentTodoEl, done: false});
                     this.newTodo = '';
                 }
-            }
+            },
+            
         }
     }
 )
