@@ -28,7 +28,12 @@ const app = new Vue(
                     this.newTodo = '';
                 }
             },
-            
+            removeElement: function(index){
+                this.todos.splice(index, 1);
+            },
+            switchTrueFalse: function(index){
+                this.todos[index].done = !this.todos[index].done
+            }
         }
     }
 )
